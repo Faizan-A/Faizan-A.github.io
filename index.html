@@ -1,28 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio Coming Soon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Faizan Portfolio</title>
 
 <style>
+
 body{
+margin:0;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-background:#111;
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#0f172a,#1e293b,#2563eb,#111827);
+background-size:400% 400%;
+animation:bgMove 10s infinite alternate;
 color:white;
-font-family:Arial;
 text-align:center;
-margin:0;
+overflow:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.container{
+max-width:700px;
+padding:30px;
+}
+
+.typing{
+font-size:40px;
+font-weight:bold;
+white-space:nowrap;
+overflow:hidden;
+border-right:3px solid white;
+width:0;
+animation:
+typing 4s steps(25,end) forwards,
+blink .8s infinite;
+}
+
+@keyframes typing{
+to{
+width:100%;
+}
+}
+
+@keyframes blink{
+50%{
+border-color:transparent;
+}
 }
 
 .loader{
-width:50px;
-height:50px;
-border:5px solid #444;
+width:60px;
+height:60px;
+border:5px solid rgba(255,255,255,.3);
 border-top:5px solid white;
 border-radius:50%;
-margin:auto;
+margin:25px auto;
 animation:spin 1s linear infinite;
 }
 
@@ -31,29 +71,69 @@ animation:spin 1s linear infinite;
 transform:rotate(360deg);
 }
 }
-</style>
 
+.buttons a{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+border:2px solid white;
+border-radius:30px;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.buttons a:hover{
+transform:translateY(-5px);
+background:white;
+color:black;
+}
+
+.status{
+margin-top:20px;
+font-size:18px;
+opacity:.8;
+}
+
+</style>
 </head>
 
 <body>
 
-<div>
-<h1>🚀 Portfolio Under Development</h1>
+<div class="container">
+
+<div class="typing">
+Hi, I'm Faizan Akhtar 🚀
+</div>
 
 <div class="loader"></div>
 
-<p>
-Hi, I'm Faizan Akhtar.<br><br>
+<h2>Portfolio Under Development</h2>
 
-My portfolio is currently under development.<br>
-Projects and details will be available soon.
+<p>
+Building projects and improving my skills.<br>
+My complete portfolio with projects and experience is coming soon.
 </p>
 
-<p>📧 faizaaan217@gmail.com</p>
+<div class="status">
+💻 MERN Stack Learner | Python | IoT Explorer
+</div>
 
-<a href="https://github.com/Faizan-A" style="color:white">
-GitHub Profile
+<div class="buttons">
+
+<a href="https://github.com/Faizan-A">
+GitHub
 </a>
+
+<a href="https://linkedin.com/in/faizan-akhtar-a31aba249">
+LinkedIn
+</a>
+
+<a href="mailto:faizaaan217@gmail.com">
+Email
+</a>
+
+</div>
 
 </div>
 
